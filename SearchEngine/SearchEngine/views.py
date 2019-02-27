@@ -10,7 +10,7 @@ def SearchFunc(request):
     context = {}
     results =[]
     if request.method == "POST":
-        key_char = request.POST.get('key_char', None).split(',')
+        key_char = request.POST.get('key_char', None).split(' ')
         str_context = request.POST.get('str_context', None).split('\n')
         print "searching:", key_char
         print "str_context:", str_context
